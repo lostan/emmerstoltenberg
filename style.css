@@ -165,7 +165,8 @@ header nav {
 .nav-links a {
     font-family: var(--font-body);
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    /* Increased size */
     color: var(--navy-blue);
     text-transform: uppercase;
     letter-spacing: 1px;
