@@ -130,11 +130,12 @@ img {
 /* Header */
 header {
     padding: 1.5rem 0;
-    position: absolute;
+    position: relative;
+    /* Changed from absolute to relative */
     width: 100%;
-    top: 0;
     z-index: 50;
-    background: transparent;
+    background: var(--off-white);
+    /* Match body background or white */
 }
 
 header nav {
