@@ -129,7 +129,7 @@ img {
 
 /* Header */
 header {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     position: absolute;
     width: 100%;
     top: 0;
@@ -144,10 +144,52 @@ header nav {
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+    display: block;
+    width: 150px;
+    /* Adjust based on actual logo aspect ratio */
+}
+
+.logo img {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+.nav-links {
+    display: none;
+    /* Hidden on mobile by default or implement hamburger later */
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--navy-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--navy-blue);
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+    }
 }
 
 /* Hero Section */

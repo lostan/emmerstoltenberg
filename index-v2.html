@@ -1,0 +1,984 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Personal Stylist para Homens em Oslo | Emmer Stoltenberg</title>
+    <meta name="description"
+        content="Consultoria independente para homens: cápsulas, compra assistida e lookbook. Agende uma avaliação gratuita de 15 min." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://exemplo.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Personal Stylist para Homens em Oslo | Emmer Stoltenberg" />
+    <meta property="og:description"
+        content="Consultoria independente para homens: cápsulas, compra assistida e lookbook. Agende uma avaliação gratuita de 15 min." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="hero-emmer.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0C1B2A;
+            /* confiança */
+            --charcoal: #1F2328;
+            /* profissionalismo */
+            --camel: #C2A77A;
+            /* toque clássico */
+            --white: #ffffff;
+            --soft: #F5F6F7;
+
+            --radius: 18px;
+            --shadow: 0 14px 50px rgba(0, 0, 0, .12);
+            --border: 1px solid rgba(255, 255, 255, .10);
+
+            --title: "Playfair Display", serif;
+            --text: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--text);
+            color: var(--charcoal);
+            background: var(--white);
+            line-height: 1.5;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        /* Layout */
+        .container {
+            width: min(1100px, 92vw);
+            margin: 0 auto
+        }
+
+        .section {
+            padding: 78px 0
+        }
+
+        .grid {
+            display: grid;
+            gap: 22px
+        }
+
+        .muted {
+            opacity: .78
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .78);
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--camel)
+        }
+
+        /* Topbar */
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: saturate(120%) blur(14px);
+            background: rgba(12, 27, 42, .72);
+            border-bottom: 1px solid rgba(255, 255, 255, .10);
+        }
+
+        .topbar .wrap {
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--white);
+            font-weight: 600;
+            letter-spacing: .02em;
+        }
+
+        .brand .mark {
+            width: 34px;
+            height: 34px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(194, 167, 122, .95), rgba(194, 167, 122, .35));
+            box-shadow: 0 10px 30px rgba(194, 167, 122, .22);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            color: rgba(255, 255, 255, .86);
+            font-size: 14px;
+        }
+
+        nav a {
+            padding: 10px 10px;
+            border-radius: 12px
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, .08)
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 14px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, .14);
+            transition: transform .12s ease, background .12s ease, border-color .12s ease;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px)
+        }
+
+        .btn-primary {
+            background: var(--camel);
+            color: #111;
+            border-color: rgba(194, 167, 122, .55);
+        }
+
+        .btn-primary:hover {
+            background: #d2bb93
+        }
+
+        .btn-ghost {
+            background: rgba(255, 255, 255, .08);
+            color: var(--white);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            background: var(--navy);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(12, 27, 42, .86) 0%, rgba(12, 27, 42, .62) 55%, rgba(12, 27, 42, .20) 100%),
+                url("hero-emmer.jpg") center/cover no-repeat;
+            transform: scale(1.02);
+            filter: saturate(1.05) contrast(1.05);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: -40% -20% auto auto;
+            width: 520px;
+            height: 520px;
+            background: radial-gradient(circle at 30% 30%, rgba(194, 167, 122, .55), transparent 60%);
+            transform: rotate(18deg);
+            opacity: .7;
+            pointer-events: none;
+        }
+
+        .hero .content {
+            position: relative;
+            padding: 78px 0;
+        }
+
+        .hero h1 {
+            font-family: var(--title);
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.05;
+            margin: 16px 0 14px;
+            letter-spacing: .01em;
+        }
+
+        .hero p {
+            font-size: clamp(16px, 2vw, 19px);
+            max-width: 62ch;
+            margin: 0 0 26px;
+            color: rgba(255, 255, 255, .90);
+        }
+
+        .hero .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            border-radius: 999px;
+            border: var(--border);
+            background: rgba(255, 255, 255, .06);
+            color: rgba(255, 255, 255, .88);
+            font-size: 13px;
+        }
+
+        /* Cards / sections */
+        .section-title {
+            font-family: var(--title);
+            font-size: 34px;
+            margin: 0 0 12px;
+            color: var(--navy);
+        }
+
+        .section-sub {
+            margin: 0 0 26px;
+            max-width: 72ch;
+            color: rgba(31, 35, 40, .78);
+        }
+
+        .card {
+            border-radius: var(--radius);
+            background: var(--white);
+            border: 1px solid rgba(31, 35, 40, .08);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, .06);
+            padding: 22px;
+        }
+
+        .card.soft {
+            background: linear-gradient(180deg, var(--soft), #fff);
+        }
+
+        /* Problem bullets */
+        .bullets {
+            display: grid;
+            gap: 12px;
+            margin-top: 16px
+        }
+
+        .bullet {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 14px 14px;
+            border-radius: 16px;
+            background: rgba(12, 27, 42, .04);
+            border: 1px solid rgba(12, 27, 42, .06);
+        }
+
+        .icon {
+            width: 28px;
+            height: 28px;
+            flex: 0 0 28px;
+            border-radius: 12px;
+            background: rgba(194, 167, 122, .18);
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(194, 167, 122, .25);
+        }
+
+        .quote {
+            margin-top: 18px;
+            padding: 16px 16px;
+            border-left: 4px solid var(--camel);
+            background: rgba(194, 167, 122, .10);
+            border-radius: 14px;
+            font-weight: 600;
+            color: rgba(12, 27, 42, .92);
+        }
+
+        /* Steps */
+        .steps {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .step h3 {
+            margin: 0 0 8px;
+            font-size: 16px;
+            color: var(--navy);
+        }
+
+        .step p {
+            margin: 0;
+            color: rgba(31, 35, 40, .78);
+            font-size: 14px;
+        }
+
+        /* Packages */
+        .packages {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            align-items: stretch;
+        }
+
+        .price {
+            font-size: 34px;
+            font-family: var(--title);
+            color: var(--navy);
+            margin: 10px 0 8px;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            border-radius: 999px;
+            background: rgba(12, 27, 42, .06);
+            border: 1px solid rgba(12, 27, 42, .08);
+            font-size: 12px;
+            color: rgba(12, 27, 42, .88);
+            margin-bottom: 8px;
+        }
+
+        .pkg ul {
+            margin: 12px 0 0;
+            padding-left: 18px;
+            color: rgba(31, 35, 40, .80);
+        }
+
+        .note {
+            margin-top: 18px;
+            font-size: 13px;
+            color: rgba(31, 35, 40, .72);
+        }
+
+        /* Differentials */
+        .diffs {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .diff {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .diff strong {
+            color: var(--navy)
+        }
+
+        .diff p {
+            margin: 0;
+            color: rgba(31, 35, 40, .78);
+            font-size: 14px
+        }
+
+        /* Testimonials/Mission */
+        .mission {
+            position: relative;
+            background: linear-gradient(135deg, rgba(12, 27, 42, 1) 0%, rgba(12, 27, 42, .92) 55%, rgba(31, 35, 40, .92) 100%);
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .mission .section-title {
+            color: var(--white)
+        }
+
+        .mission .section-sub {
+            color: rgba(255, 255, 255, .82)
+        }
+
+        .mission .card {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .12);
+            box-shadow: none;
+        }
+
+        .mission blockquote {
+            margin: 0;
+            font-family: var(--title);
+            font-size: 28px;
+            line-height: 1.2;
+            color: rgba(255, 255, 255, .95);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(180deg, #fff 0%, rgba(245, 246, 247, .85) 100%);
+        }
+
+        .final-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 22px;
+            border-radius: var(--radius);
+            background: var(--navy);
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .final-box h3 {
+            margin: 0;
+            font-family: var(--title);
+            font-size: 26px;
+        }
+
+        .final-box p {
+            margin: 8px 0 0;
+            color: rgba(255, 255, 255, .86);
+            max-width: 68ch;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 36px 0;
+            background: var(--charcoal);
+            color: rgba(255, 255, 255, .86);
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: 1.2fr .8fr 1fr;
+            align-items: start;
+        }
+
+        .footer-grid a {
+            color: rgba(255, 255, 255, .86)
+        }
+
+        .footer-grid a:hover {
+            color: var(--white)
+        }
+
+        .small {
+            font-size: 13px;
+            opacity: .82
+        }
+
+        /* Responsive */
+        @media (max-width: 980px) {
+            .steps {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+
+            .packages {
+                grid-template-columns: 1fr
+            }
+
+            .diffs {
+                grid-template-columns: 1fr
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr
+            }
+
+            nav {
+                display: none
+            }
+        }
+    </style>
+
+    <!-- JSON-LD (LocalBusiness/Service) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Emmer Stoltenberg Styling",
+    "description": "Consultoria de estilo pessoal para homens em Oslo. Cápsulas, compra assistida e lookbook digital.",
+    "areaServed": "Oslo, Norway",
+    "telephone": "+47 906 37 771",
+    "url": "https://exemplo.com/",
+    "sameAs": [
+      "https://instagram.com/SEU_INSTAGRAM"
+    ],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Start (3h)",
+        "priceCurrency": "NOK",
+        "price": "3500",
+        "description": "Diagnóstico + compra assistida + lookbook resumido."
+      },
+      {
+        "@type": "Offer",
+        "name": "Capsule (6h em 2 sessões)",
+        "priceCurrency": "NOK",
+        "price": "7500",
+        "description": "Cápsula completa (trabalho/casual) + lookbook completo."
+      },
+      {
+        "@type": "Offer",
+        "name": "Garderobe Detox (2h em casa)",
+        "priceCurrency": "NOK",
+        "price": "2500",
+        "description": "Triagem + lista de faltas/ajustes."
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+    <!-- Topbar -->
+    <header class="topbar">
+        <div class="container wrap">
+            <a class="brand" href="#top" aria-label="Ir para o topo">
+                <span class="mark" aria-hidden="true"></span>
+                <span>Emmer Stoltenberg Styling</span>
+            </a>
+
+            <nav aria-label="Navegação principal">
+                <a href="#problema">O problema</a>
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#pacotes">Pacotes</a>
+                <a href="#diferenciais">Diferenciais</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <a class="btn btn-primary"
+                href="https://wa.me/4790637771?text=Oi%20Emmer!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20de%2015%20min."
+                target="_blank" rel="noopener">
+                Agendar
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="top" class="hero">
+        <div class="container content">
+            <div class="kicker"><span class="dot"></span> Minimalismo escandinavo • Masculino • Limpo</div>
+            <h1>Vista-se bem sem pensar demais.</h1>
+            <p>
+                Consultoria independente para homens em <strong>Oslo</strong>. Montamos sua cápsula, acompanhamos você
+                na loja e
+                entregamos um lookbook simples para o dia a dia.
+            </p>
+
+            <div class="cta-row">
+                <a class="btn btn-primary"
+                    href="https://wa.me/4790637771?text=Oi%20Emmer!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20de%2015%20min."
+                    target="_blank" rel="noopener">
+                    Agendar avaliação gratuita de 15 min
+                </a>
+                <a class="btn btn-ghost" href="#pacotes">Ver pacotes</a>
+                <span class="pill" title="Sem comissão de lojas">✓ Independente (sem comissões)</span>
+                <span class="pill" title="Foco em praticidade e caimento">✓ Foco em homens</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- PROBLEMA -->
+    <section id="problema" class="section">
+        <div class="container">
+            <h2 class="section-title">Seu guarda-roupa trabalha a seu favor ou contra você?</h2>
+
+            <div class="grid" style="grid-template-columns: 1.1fr .9fr; align-items:start;">
+                <div>
+                    <p class="section-sub">
+                        Uma imagem alinhada com quem você é (e onde você quer chegar) não é vaidade — é estratégia.
+                    </p>
+
+                    <div class="bullets">
+                        <div class="bullet">
+                            <div class="icon" aria-hidden="true">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 7h12M6 12h8M6 17h10" stroke="#0C1B2A" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div>Você abre o armário cheio, mas sente que não tem nada adequado para vestir?</div>
+                        </div>
+
+                        <div class="bullet">
+                            <div class="icon" aria-hidden="true">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 12h16M12 4v16" stroke="#0C1B2A" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div>Sente que seu estilo estagnou e não reflete mais seu sucesso profissional?</div>
+                        </div>
+
+                        <div class="bullet">
+                            <div class="icon" aria-hidden="true">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                    <path d="M20 12a8 8 0 1 1-16 0" stroke="#0C1B2A" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M12 8v5l3 2" stroke="#0C1B2A" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>Gasta dinheiro em roupas que parecem ótimas na loja, mas nunca usa em casa?</div>
+                        </div>
+
+                        <div class="bullet">
+                            <div class="icon" aria-hidden="true">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2l2.6 6.6L22 9l-5 4.2L18.2 21 12 17.5 5.8 21 7 13.2 2 9l7.4-.4L12 2z"
+                                        stroke="#0C1B2A" stroke-width="2" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>Acha a moda confusa e cansativa?</div>
+                        </div>
+                    </div>
+
+                    <div class="quote">“Vestir-se bem não precisa ser complicado. Precisa ser estratégico.”</div>
+                </div>
+
+                <div class="card soft">
+                    <h3 style="margin:0 0 10px; color:var(--navy); font-family:var(--title); font-size:22px;">
+                        Clássico moderno, no seu ritmo
+                    </h3>
+                    <p class="muted" style="margin:0 0 12px;">
+                        Você não precisa virar “fashion”. Você só precisa de um sistema simples:
+                        peças certas, combinações fáceis, caimento impecável.
+                    </p>
+                    <p class="muted" style="margin:0;">
+                        E sim — o conhecimento de mercado e de promoções pode render oportunidades de
+                        <strong>até 50% de desconto</strong> quando você compra no momento certo.
+                        Só na escolha de lojas e timing, você já tende a recuperar o investimento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona" class="section" style="background:var(--soft);">
+        <div class="container">
+            <h2 class="section-title">Como funciona</h2>
+            <p class="section-sub">
+                Um passo a passo claro reduz atrito e deixa a decisão fácil — do diagnóstico ao lookbook.
+            </p>
+
+            <div class="grid steps">
+                <div class="card step">
+                    <h3>Diagnóstico (30–45 min)</h3>
+                    <p>Estilo, rotina, orçamento, cores/caimento.</p>
+                </div>
+
+                <div class="card step">
+                    <h3>Plano de cápsula</h3>
+                    <p>Lista de peças essenciais + combinações.</p>
+                </div>
+
+                <div class="card step">
+                    <h3>Acompanhamento na loja</h3>
+                    <p>Roteiros curtos, prova, fotos de referência.</p>
+                </div>
+
+                <div class="card step">
+                    <h3>Lookbook digital + ajustes</h3>
+                    <p>Guia de combinações e alfaiate indicado.</p>
+                </div>
+            </div>
+
+            <div class="grid diffs" style="margin-top:22px;">
+                <div class="card diff">
+                    <div class="icon" aria-hidden="true">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                            <path d="M20 6L9 17l-5-5" stroke="#0C1B2A" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong>Praticidade real</strong>
+                        <p>Você sai com um plano, não com teoria.</p>
+                    </div>
+                </div>
+
+                <div class="card diff">
+                    <div class="icon" aria-hidden="true">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2v20M2 12h20" stroke="#0C1B2A" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong>Rápido e objetivo</strong>
+                        <p>Roteiro de compras enxuto e decisões guiadas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACOTES -->
+    <section id="pacotes" class="section">
+        <div class="container">
+            <h2 class="section-title">Pacotes &amp; preços</h2>
+            <p class="section-sub">
+                Valores sugeridos. Sempre com transparência: <strong>sem comissão de lojas</strong> e política de
+                cancelamento simples.
+            </p>
+
+            <div class="grid packages">
+                <div class="card pkg">
+                    <div class="tag">Start (3h)</div>
+                    <div class="price">3.500 NOK</div>
+                    <div class="muted">Diagnóstico + compra assistida + lookbook resumido</div>
+                    <ul>
+                        <li>Diagnóstico: estilo, rotina e orçamento</li>
+                        <li>Compra assistida: roteiro de lojas e prova guiada</li>
+                        <li>Lookbook digital: combinações essenciais</li>
+                    </ul>
+                </div>
+
+                <div class="card pkg"
+                    style="border-color: rgba(194,167,122,.38); box-shadow:0 16px 60px rgba(194,167,122,.18);">
+                    <div class="tag" style="background:rgba(194,167,122,.16); border-color:rgba(194,167,122,.32);">
+                        Capsule (6h em 2 sessões)</div>
+                    <div class="price">7.500 NOK</div>
+                    <div class="muted">Cápsula completa (trabalho/casual) + lookbook completo</div>
+                    <ul>
+                        <li>Plano de cápsula completo</li>
+                        <li>Compra assistida guiada</li>
+                        <li>Lookbook completo com combinações fotografadas</li>
+                        <li>Ajustes recomendados + alfaiate indicado</li>
+                    </ul>
+                </div>
+
+                <div class="card pkg">
+                    <div class="tag">Garderobe Detox (2h em casa)</div>
+                    <div class="price">2.500 NOK</div>
+                    <div class="muted">Triagem + lista de faltas/ajustes</div>
+                    <ul>
+                        <li>Triagem do guarda-roupa</li>
+                        <li>O que fica, o que sai, o que ajusta</li>
+                        <li>Lista objetiva do que falta</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="note">
+                <strong>Hora avulsa:</strong> 1.100–1.300 NOK/h (âncora: práticas do mercado).
+            </p>
+
+            <div class="card" style="margin-top:18px;">
+                <strong style="color:var(--navy);">Política simples</strong>
+                <p class="muted" style="margin:10px 0 0;">
+                    Cancelamento e remarcação sem complicação — combinado previamente no agendamento.
+                    (Você pode ajustar este texto quando definir a política final.)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="section" style="background:var(--soft);">
+        <div class="container">
+            <h2 class="section-title">Diferenciais</h2>
+            <p class="section-sub">
+                Um serviço pensado para homens, com foco em caimento, praticidade e clima norueguês.
+            </p>
+
+            <div class="grid diffs">
+                <div class="card diff">
+                    <div class="icon" aria-hidden="true">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                            <path d="M20 6L9 17l-5-5" stroke="#0C1B2A" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong>Independente de lojas</strong>
+                        <p>Sem comissões — recomendações 100% alinhadas ao seu interesse.</p>
+                    </div>
+                </div>
+
+                <div class="card diff">
+                    <div class="icon" aria-hidden="true">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z" stroke="#0C1B2A" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong>Foco em homens</strong>
+                        <p>Praticidade, caimento e combinações fáceis para a rotina.</p>
+                    </div>
+                </div>
+
+                <div class="card diff">
+                    <div class="icon" aria-hidden="true">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 12h18M12 3v18" stroke="#0C1B2A" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong>Adequado ao clima norueguês</strong>
+                        <p>Camadas inteligentes, tecidos certos e sapatos para chuva e escritório.</p>
+                    </div>
+                </div>
+
+                <div class="card diff">
+                    <div class="icon" aria-hidden="true">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 7h16M6 7v14h12V7" stroke="#0C1B2A" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong>Presencial</strong>
+                        <p>Olho no detalhe: prova, ajustes e referências fotográficas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS / MISSÃO -->
+    <section id="depoimentos" class="section mission">
+        <div class="container">
+            <h2 class="section-title">Depoimentos</h2>
+            <p class="section-sub">
+                Site novo — mesma missão desde o primeiro cliente: simplificar o vestir e elevar o padrão com
+                consistência.
+            </p>
+
+            <div class="card">
+                <blockquote>
+                    “A confiança começa quando você se sente bem na sua própria pele (e nas suas roupas).”
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section final-cta" id="contato">
+        <div class="container">
+            <div class="final-box">
+                <div>
+                    <h3>Pronto para elevar seu padrão? Vamos conversar.</h3>
+                    <p>Pronto para se vestir melhor sem complicação? Agendar avaliação gratuita de 15 min.</p>
+                </div>
+                <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+                    <a class="btn btn-primary"
+                        href="https://wa.me/4790637771?text=Oi%20Emmer!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20de%2015%20min."
+                        target="_blank" rel="noopener">
+                        WhatsApp
+                    </a>
+                    <a class="btn btn-ghost"
+                        href="mailto:contato@emmerstyling.no?subject=Agendar%20consultoria&body=Oi%20Emmer!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20de%2015%20min.">
+                        Email
+                    </a>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top:18px;">
+                <strong style="color:var(--navy);">Contato</strong>
+                <p class="muted" style="margin:10px 0 0;">
+                    WhatsApp: <a href="https://wa.me/4790637771" target="_blank" rel="noopener"><strong>+47 906 37
+                            771</strong></a><br />
+                    Email: <a href="mailto:contato@emmerstyling.no"><strong>contato@emmerstyling.no</strong></a><br />
+                    Instagram: <a href="https://instagram.com/SEU_INSTAGRAM" target="_blank"
+                        rel="noopener"><strong>@SEU_INSTAGRAM</strong></a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="brand" style="margin-bottom:10px;">
+                        <span class="mark" aria-hidden="true"></span>
+                        <span>Emmer Stoltenberg Styling</span>
+                    </div>
+                    <p class="small">
+                        Consultoria de estilo pessoal para homens em Oslo — cápsulas, compra assistida e lookbook.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>Links rápidos</strong>
+                    <div class="small" style="display:grid; gap:8px; margin-top:10px;">
+                        <a href="#problema">O problema</a>
+                        <a href="#como-funciona">Como funciona</a>
+                        <a href="#pacotes">Pacotes</a>
+                        <a href="#diferenciais">Diferenciais</a>
+                    </div>
+                </div>
+
+                <div>
+                    <strong>Chamada final</strong>
+                    <p class="small" style="margin-top:10px;">
+                        “Pronto para elevar seu padrão? Vamos conversar.”
+                    </p>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                        <a class="btn btn-ghost" href="https://instagram.com/SEU_INSTAGRAM" target="_blank"
+                            rel="noopener">Instagram</a>
+                        <a class="btn btn-ghost" href="https://wa.me/4790637771" target="_blank"
+                            rel="noopener">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="small" style="margin-top:18px; border-top:1px solid rgba(255,255,255,.10); padding-top:14px;">
+                © <span id="year"></span> Emmer Stoltenberg Styling. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!--
+    SEO (Norueguês) – termos-alvo sugeridos:
+    personlig stylist menn Oslo, klesrådgiver menn, personal shopper herre, garderobe kapsel menn,
+    hva kler meg best, dress tilpasning Oslo, hvilke farger passer meg, shoppinghjelp menn.
+
+    Arquitetura recomendada:
+    /personal-stylist-menn
+    /garderobe-detox
+    /capsule-wardrobe-menn
+
+    Conteúdo topo de funil (blog):
+    - Como montar cápsula para o outono em Oslo
+    - Guia de tecidos para o inverno
+    - Sapatos para chuva e escritório
+  -->
+
+</body>
+
+</html>
