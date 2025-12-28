@@ -196,7 +196,7 @@ header nav {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     /* Changed to flex for mobile column default */
     flex-direction: column;
@@ -233,7 +233,7 @@ header nav {
 }
 
 .hero .subtitle {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     margin: 2rem 0;
     color: var(--text-primary);
 }
@@ -327,12 +327,12 @@ header nav {
 /* How It Works */
 .section-header {
     max-width: 600px;
-    margin: 0 auto 4rem;
+    margin: 0 auto;
 }
 
 .steps-container {
     display: grid;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 4rem;
 }
 
@@ -350,7 +350,7 @@ header nav {
 
 .step-card {
     background: transparent;
-    padding: 1rem;
+    padding: rem;
     position: relative;
 }
 
@@ -360,7 +360,7 @@ header nav {
     color: rgba(136, 146, 176, 0.2);
     /* Faded number */
     font-weight: 700;
-    margin-bottom: -1rem;
+    margin-bottom: -0.7rem;
     position: relative;
     z-index: 1;
 }
@@ -369,6 +369,10 @@ header nav {
     position: relative;
     z-index: 2;
     margin-bottom: 0.5rem;
+}
+
+.step-card p {
+    margin-bottom: -1.0rem;
 }
 
 .flatlay-showcase {
