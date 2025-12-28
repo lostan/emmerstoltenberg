@@ -492,6 +492,48 @@ header nav {
     left: 0;
 }
 
+/* Differentials */
+.differentials {
+    background-color: var(--navy-blue);
+    /* Ensuring dark background */
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+    /* Ensure it sits nicely */
+}
+
+.diff-grid {
+    display: grid;
+    gap: 3rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media (min-width: 600px) {
+    .diff-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .diff-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.diff-item h4 {
+    color: var(--beige-sand);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
+.diff-item p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
 /* Mission */
 .mission {
     background-color: var(--navy-blue);
