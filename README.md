@@ -29,6 +29,13 @@ Você precisa ter o **Node.js** instalado para usar o comando `npx`.
 
     Após a conclusão, o terminal mostrará o link onde a nova versão está disponível.
 
+3.  **Configurar Domínio (Opcional)**
+    Para conectar seu domínio personalizado (ex: `emmerstoltenberg.no`):
+    1.  Acesse o [Console do Firebase Hosting](https://console.firebase.google.com/project/emmerstoltenberg-4196751-8e03e/hosting).
+    2.  Clique em **"Adicionar domínio personalizado"**.
+    3.  Digite o domínio que você deseja usar.
+    4.  Siga as instruções para adicionar os registros DNS (TXT e A) no seu provedor de domínio.
+
 ## 🛠️ Desenvolvimento Local
 
 Como este é um projeto estático simples, você pode visualizá-lo localmente de duas formas:
