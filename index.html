@@ -2,10 +2,18 @@
 <html lang="no">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSF3XMD5FL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZSF3XMD5FL');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personlig Stylist for Menn i Oslo | Emmer Stoltenberg</title>
-    <meta name="description"
+    <title data-i18n="page_title">Personlig Stylist for Menn i Oslo | Emmer Stoltenberg</title>
+    <meta name="description" data-i18n="meta_description"
         content="Uavhengig stylingrådgivning for menn: kapselgarderobe, personal shopper og lookbook. Bestill en gratis 15-min evalueringssamtale.">
     <meta name="keywords"
         content="personlig stylist menn, personal shopper menn, oslo, klesstil menn, kapselgarderobe menn, fargeanalyse menn, målsøm, image consulting menn">
@@ -30,6 +38,7 @@
     <meta name="author" content="Emmer Stoltenberg">
     <meta name="publisher" content="Emmer Stoltenberg">
     <link rel="canonical" href="https://www.emmerstoltenberg.no/">
+    <link rel="alternate" hreflang="no" href="https://www.emmerstoltenberg.no/" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,14 +57,23 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Emmer Stoltenberg Styling",
-      "image": "assets/hero_emmer.png",
+      "image": "https://www.emmerstoltenberg.no/assets/hero_emmer.png",
+      "url": "https://www.emmerstoltenberg.no/",
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Oslo",
         "addressCountry": "NO"
       },
-      "description": "Personlig stylingrådgivning for mannen som verdsetter sitt image."
+      "areaServed": {
+        "@type": "City",
+        "name": "Oslo"
+      },
+      "description": "Personlig stylingrådgivning for mannen som verdsetter sitt image.",
+      "founder": {
+        "@type": "Person",
+        "name": "Emmer Stoltenberg"
+      }
     }
     </script>
 </head>
@@ -67,12 +85,25 @@
             <a href="#" class="logo">
                 <img src="assets/logo.png" alt="Emmer Stoltenberg">
             </a>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="ri-menu-line"></i>
+            </button>
             <div class="nav-links">
-                <a href="#about">Om</a>
-                <a href="#how-it-works">Konsulenttjenester</a>
-                <a href="#testimonials">Uttalelser</a>
-                <a href="#packages">Priser</a>
-                <a href="#faq">FAQ</a>
+                <a href="#about" data-i18n="nav_about">Om</a>
+                <a href="#how-it-works" data-i18n="nav_services">Konsulenttjenester</a>
+                <a href="#testimonials" data-i18n="nav_testimonials">Uttalelser</a>
+                <a href="#packages" data-i18n="nav_pricing">Priser</a>
+                <a href="#faq" data-i18n="nav_faq">FAQ</a>
+
+                <div class="lang-selector">
+                    <button class="lang-btn" aria-label="Select Language">NO <i
+                            class="ri-arrow-down-s-line"></i></button>
+                    <div class="lang-dropdown">
+                        <a href="#" data-lang="no">Norsk</a>
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="pt">Português</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -85,11 +116,12 @@
             </div>
             <div class="hero-content">
                 <div class="hero-text-wrapper">
-                    <h2>Tidløs Stil.<br>Moderne Selvtillit.</h2>
-                    <p class="subtitle">Personlig smellerådgivning for mannen som verdsetter sitt image, men ikke har
+                    <h1 data-i18n="hero_title">Tidløs Stil.<br>Moderne Selvtillit.</h1>
+                    <p class="subtitle" data-i18n="hero_subtitle">Personlig stylingrådgivning for mannen som verdsetter
+                        sitt image, men ikke har
                         tid å miste. Oppdag kraften i det Moderne Klassiske.</p>
-                    <a href="https://calendar.app.google/aMiKSRivJgHkohbu9" class="btn btn-primary"
-                        target="_blank">Bestill Konsultasjon</a>
+                    <a href="https://calendar.app.google/aMiKSRivJgHkohbu9" class="btn btn-primary" target="_blank"
+                        data-i18n="hero_cta">Bestill Konsultasjon</a>
                 </div>
             </div>
         </section>
@@ -99,27 +131,30 @@
             <div class="container">
                 <div class="split-layout">
                     <div class="split-content">
-                        <h2>Jobber garderoben din for deg?</h2>
+                        <h2 data-i18n="problem_title">Jobber garderoben din for deg?</h2>
                         <div class="problem-list">
                             <div class="problem-item">
                                 <span class="icon"><i class="fa-solid fa-circle-question"></i></span>
                                 <div>
-                                    <strong>Daglig Usikkerhet</strong>
-                                    <p>Du åpner et fullt skap, men føler at du ikke har noe passende å ha på deg?</p>
+                                    <strong data-i18n="problem_1_title">Daglig Usikkerhet</strong>
+                                    <p data-i18n="problem_1_desc">Du åpner et fullt skap, men føler at du ikke har noe
+                                        passende å ha på deg?</p>
                                 </div>
                             </div>
                             <div class="problem-item">
                                 <span class="icon"><i class="fa-solid fa-user-tie"></i></span>
                                 <div>
-                                    <strong>Stil som Stagnert</strong>
-                                    <p>Føler du at stilen din ikke lenger reflekterer din profesjonelle suksess?</p>
+                                    <strong data-i18n="problem_2_title">Stil som Stagnert</strong>
+                                    <p data-i18n="problem_2_desc">Føler du at stilen din ikke lenger reflekterer din
+                                        profesjonelle suksess?</p>
                                 </div>
                             </div>
                             <div class="problem-item">
                                 <span class="icon"><i class="fa-solid fa-tags"></i></span>
                                 <div>
-                                    <strong>Unødvendige Utgifter</strong>
-                                    <p>Bruker du penger på klær som ser bra ut i butikken, men som aldri blir brukt?</p>
+                                    <strong data-i18n="problem_3_title">Unødvendige Utgifter</strong>
+                                    <p data-i18n="problem_3_desc">Bruker du penger på klær som ser bra ut i butikken,
+                                        men som aldri blir brukt?</p>
                                 </div>
                             </div>
                         </div>
@@ -135,8 +170,9 @@
         <!-- ABOUT -->
         <section id="about" class="section-padding">
             <div class="container text-center">
-                <h2 class="section-title">Om Emmer</h2>
-                <p style="max-width: 800px; margin: 0 auto; color: var(--text-secondary);">Mannlig stylist og
+                <h2 class="section-title" data-i18n="about_title">Om Emmer</h2>
+                <p style="max-width: 800px; margin: 0 auto; color: var(--text-secondary);" data-i18n="about_text">
+                    Mannlig stylist og
                     stilkonsulent i Oslo. Uavhengig rådgivning med fokus på passform og allsidige kapselgarderober som
                     respekterer både budsjett og livsstil. Tilgjengelig for møter i Oslo og online.</p>
             </div>
@@ -146,30 +182,30 @@
         <section id="how-it-works" class="how-it-works section-padding bg-alt">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2>Hvordan det fungerer</h2>
-                    <p class="section-sub">Fire enkle steg til din nye stil.</p>
+                    <h2 data-i18n="how_title">Hvordan det fungerer</h2>
+                    <p class="section-sub" data-i18n="how_subtitle">Fire enkle steg til din nye stil.</p>
                 </div>
 
                 <div class="steps-container">
                     <div class="step-card">
                         <div class="step-number">01</div>
-                        <h3>Diagnose</h3>
-                        <p>Analyse av stil, rutiner og budsjett (30-45 min).</p>
+                        <h3 data-i18n="step_1_title">Diagnose</h3>
+                        <p data-i18n="step_1_desc">Analyse av stil, rutiner og budsjett (30-45 min).</p>
                     </div>
                     <div class="step-card">
                         <div class="step-number">02</div>
-                        <h3>Plan</h3>
-                        <p>Liste over essensielle plagg og strategiske kombinasjoner.</p>
+                        <h3 data-i18n="step_2_title">Plan</h3>
+                        <p data-i18n="step_2_desc">Liste over essensielle plagg og strategiske kombinasjoner.</p>
                     </div>
                     <div class="step-card">
                         <div class="step-number">03</div>
-                        <h3>Shopping</h3>
-                        <p>Assistert shopping med effektiv rute og veiledning.</p>
+                        <h3 data-i18n="step_3_title">Shopping</h3>
+                        <p data-i18n="step_3_desc">Assistert shopping med effektiv rute og veiledning.</p>
                     </div>
                     <div class="step-card">
                         <div class="step-number">04</div>
-                        <h3>Lookbook</h3>
-                        <p>Digital guide med kombinasjoner og kontakt til skredder.</p>
+                        <h3 data-i18n="step_4_title">Lookbook</h3>
+                        <p data-i18n="step_4_desc">Digital guide med kombinasjoner og kontakt til skredder.</p>
                     </div>
                 </div>
                 <div class="flatlay-showcase">
@@ -183,24 +219,24 @@
         <section class="differentials section-padding bg-dark">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 style="color: white;">Hvorfor Velge Oss</h2>
+                    <h2 style="color: white;" data-i18n="why_title">Hvorfor Velge Oss</h2>
                 </div>
                 <div class="diff-grid">
                     <div class="diff-item">
-                        <h4>Uavhengig</h4>
-                        <p>Ingen provisjon fra butikker. 100% fokus på deg.</p>
+                        <h4 data-i18n="diff_1_title">Uavhengig</h4>
+                        <p data-i18n="diff_1_desc">Ingen provisjon fra butikker. 100% fokus på deg.</p>
                     </div>
                     <div class="diff-item">
-                        <h4>Spesialist</h4>
-                        <p>Fokus på menn: praktisk tilnærming og perfekt passform.</p>
+                        <h4 data-i18n="diff_2_title">Spesialist</h4>
+                        <p data-i18n="diff_2_desc">Fokus på menn: praktisk tilnærming og perfekt passform.</p>
                     </div>
                     <div class="diff-item">
-                        <h4>Lokal</h4>
-                        <p>Tilpasset det norske klimaet. Smart lag-på-lag.</p>
+                        <h4 data-i18n="diff_3_title">Lokal</h4>
+                        <p data-i18n="diff_3_desc">Tilpasset det norske klimaet. Smart lag-på-lag.</p>
                     </div>
                     <div class="diff-item">
-                        <h4>Personlig</h4>
-                        <p>Ekte oppfølging, øye for detaljer og kvalitet.</p>
+                        <h4 data-i18n="diff_4_title">Personlig</h4>
+                        <p data-i18n="diff_4_desc">Ekte oppfølging, øye for detaljer og kvalitet.</p>
                     </div>
                 </div>
             </div>
@@ -209,22 +245,25 @@
         <!-- TESTIMONIALS -->
         <section id="testimonials" class="section-padding">
             <div class="container">
-                <h2 class="section-title text-center">Hva kundene sier</h2>
+                <h2 class="section-title text-center" data-i18n="testimonials_title">Hva kundene sier</h2>
                 <div class="testimonials-grid">
                     <blockquote class="quote-card">
-                        <p>“Sparte både tid og penger. Nå bruker jeg alle kombinasjonene i lookbooken og føler meg
+                        <p data-i18n="quote_1_text">“Sparte både tid og penger. Nå bruker jeg alle kombinasjonene i
+                            lookbooken og føler meg
                             selvsikker.”
                         </p>
-                        <cite class="muted">— André, Oslo</cite>
+                        <cite class="muted" data-i18n="quote_1_author">— André, Oslo</cite>
                     </blockquote>
                     <blockquote class="quote-card">
-                        <p>“Rett på sak. På en ettermiddag løste vi både jobb- og fritidsgarderoben uten overflødige
+                        <p data-i18n="quote_2_text">“Rett på sak. På en ettermiddag løste vi både jobb- og
+                            fritidsgarderoben uten overflødige
                             plagg.”</p>
-                        <cite class="muted">— Gustavo, Bærum</cite>
+                        <cite class="muted" data-i18n="quote_2_author">— Gustavo, Bærum</cite>
                     </blockquote>
                     <blockquote class="quote-card">
-                        <p>“Jeg hatet å kjøpe klær. Med shoppingruten ble det enkelt. Anbefales på det sterkeste.”</p>
-                        <cite class="muted">— Henrik, Oslo</cite>
+                        <p data-i18n="quote_3_text">“Jeg hatet å kjøpe klær. Med shoppingruten ble det enkelt. Anbefales
+                            på det sterkeste.”</p>
+                        <cite class="muted" data-i18n="quote_3_author">— Henrik, Oslo</cite>
                     </blockquote>
                 </div>
             </div>
@@ -234,58 +273,59 @@
         <section class="packages section-padding" id="packages">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2>Investering</h2>
+                    <h2 data-i18n="pricing_title">Investering</h2>
                 </div>
                 <div class="packages-grid">
                     <div class="package-card">
                         <div class="card-header">
-                            <h3>Garderobe Detox</h3>
+                            <h3 data-i18n="package_1_title">Garderobe Detox</h3>
                             <div class="price">2.500 NOK</div>
-                            <span class="duration">2t hjemmebesøk</span>
+                            <span class="duration" data-i18n="package_1_duration">2t hjemmebesøk</span>
                         </div>
                         <div class="card-body">
                             <ul>
-                                <li>Full gjennomgang hjemme</li>
-                                <li>Identifisering av hva som fungerer</li>
-                                <li>Liste over mangler og justeringer</li>
+                                <li data-i18n="package_1_li_1">Full gjennomgang hjemme</li>
+                                <li data-i18n="package_1_li_2">Identifisering av hva som fungerer</li>
+                                <li data-i18n="package_1_li_3">Liste over mangler og justeringer</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="package-card featured">
-                        <div class="featured-badge">Mest Populær</div>
+                        <div class="featured-badge" data-i18n="package_2_badge">Mest Populær</div>
                         <div class="card-header">
-                            <h3>Start</h3>
+                            <h3 data-i18n="package_2_title">Start</h3>
                             <div class="price">3.500 NOK</div>
-                            <span class="duration">3t totalt</span>
+                            <span class="duration" data-i18n="package_2_duration">3t totalt</span>
                         </div>
                         <div class="card-body">
                             <ul>
-                                <li>Fullstendig stildiagnose</li>
-                                <li>Assistert shopping-økt</li>
-                                <li>Oppsummert kapsel-lookbook</li>
+                                <li data-i18n="package_2_li_1">Fullstendig stildiagnose</li>
+                                <li data-i18n="package_2_li_2">Assistert shopping-økt</li>
+                                <li data-i18n="package_2_li_3">Oppsummert kapsel-lookbook</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="package-card">
                         <div class="card-header">
-                            <h3>Capsule</h3>
+                            <h3 data-i18n="package_3_title">Capsule</h3>
                             <div class="price">7.500 NOK</div>
-                            <span class="duration">6t (2 økter)</span>
+                            <span class="duration" data-i18n="package_3_duration">6t (2 økter)</span>
                         </div>
                         <div class="card-body">
                             <ul>
-                                <li>Total fornyelse (Jobb/Fritid)</li>
-                                <li>Omfattende shoppingrute</li>
-                                <li>Detaljert digital lookbook</li>
+                                <li data-i18n="package_3_li_1">Total fornyelse (Jobb/Fritid)</li>
+                                <li data-i18n="package_3_li_2">Omfattende shoppingrute</li>
+                                <li data-i18n="package_3_li_3">Detaljert digital lookbook</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="hourly-rate text-center">
-                    <p>Enkelttime: <strong>1.100–1.300 NOK/t</strong></p>
-                    <small>*Ingen provisjon fra butikker. Du betaler kun for tjenesten.</small>
+                    <p data-i18n="hourly_rate">Enkelttime: <strong>1.100–1.300 NOK/t</strong></p>
+                    <small data-i18n="no_commission">*Ingen provisjon fra butikker. Du betaler kun for
+                        tjenesten.</small>
                 </div>
             </div>
         </section>
@@ -294,35 +334,42 @@
         <section id="faq" class="section-padding bg-alt">
             <div class="container faq">
                 <div class="faq-content">
-                    <h2 class="section-title">Ofte stilte spørsmål</h2>
+                    <h2 class="section-title" data-i18n="faq_title">Ofte stilte spørsmål</h2>
                     <details>
-                        <summary>Må jeg kjøpe noe med en gang?</summary>
-                        <p>Nei. Du får en klar plan og kjøper i ditt eget tempo — med veiledning.</p>
+                        <summary data-i18n="faq_1_q">Må jeg kjøpe noe med en gang?</summary>
+                        <p data-i18n="faq_1_a">Nei. Du får en klar plan og kjøper i ditt eget tempo — med veiledning.
+                        </p>
                     </details>
                     <details>
-                        <summary>Hva om budsjettet mitt er begrenset?</summary>
-                        <p>Vi jobber med kapsler fokusert på kostnad/nytte og smarte justeringer. Å kjøpe færre, men
+                        <summary data-i18n="faq_2_q">Hva om budsjettet mitt er begrenset?</summary>
+                        <p data-i18n="faq_2_a">Vi jobber med kapsler fokusert på kostnad/nytte og smarte justeringer. Å
+                            kjøpe færre, men
                             bedre plagg er en del av metoden.</p>
                     </details>
                     <details>
-                        <summary>Hjelper du med store størrelser og tilpasninger?</summary>
-                        <p>Ja. Vi henviser til skredder når det er nødvendig for å oppnå perfekt passform.</p>
+                        <summary data-i18n="faq_3_q">Hjelper du med store størrelser og tilpasninger?</summary>
+                        <p data-i18n="faq_3_a">Ja. Vi henviser til skredder når det er nødvendig for å oppnå perfekt
+                            passform.</p>
                     </details>
                     <details>
-                        <summary>Tilbyr du tjenester online?</summary>
-                        <p>Ja. Diagnose, kapselplanlegging og ruter kan gjøres digitalt. Butikkbesøk er valgfritt.</p>
+                        <summary data-i18n="faq_4_q">Tilbyr du tjenester online?</summary>
+                        <p data-i18n="faq_4_a">Ja. Diagnose, kapselplanlegging og ruter kan gjøres digitalt. Butikkbesøk
+                            er valgfritt.</p>
                     </details>
                     <details>
-                        <summary>Hvor lang tid tar det?</summary>
-                        <p>Fra 2 til 6 timer avhengig av pakken. Deretter kan du bestille enkelttimer ved behov.</p>
+                        <summary data-i18n="faq_5_q">Hvor lang tid tar det?</summary>
+                        <p data-i18n="faq_5_a">Fra 2 til 6 timer avhengig av pakken. Deretter kan du bestille
+                            enkelttimer ved behov.</p>
                     </details>
                 </div>
                 <aside class="cta-final" aria-label="Kontakt og bestilling">
-                    <h3 style="margin-top:0">Klar for å kle deg bedre uten stress?</h3>
-                    <p class="muted">Bestill en gratis 15-minutters vurdering eller snakk med meg nå på WhatsApp.</p>
+                    <h3 style="margin-top:0" data-i18n="cta_final_title">Klar for å kle deg bedre uten stress?</h3>
+                    <p class="muted" data-i18n="cta_final_text">Bestill en gratis 15-minutters vurdering eller snakk med
+                        meg nå på WhatsApp.</p>
                     <div style="display:flex; gap:.8rem; flex-wrap:wrap">
                         <a class="btn btn-primary" href="https://calendar.app.google/aMiKSRivJgHkohbu9"
-                            target="_blank"><i class="ri-calendar-line"></i> Bestill vurdering</a>
+                            target="_blank"><i class="ri-calendar-line"></i> <span data-i18n="btn_assessment">Bestill
+                                vurdering</span></a>
                         <a class="btn btn-outline"
                             href="https://wa.me/4790637771?text=Hei%20Emerson%2C%20jeg%20vil%20gjerne%20bestille%20en%20gratis%20vurdering"
                             target="_blank" rel="noopener"><i class="ri-whatsapp-line"></i> WhatsApp 90637771</a>
@@ -338,7 +385,8 @@
             <div class="container">
                 <div class="mission-content text-center">
                     <span class="decorative-line"></span>
-                    <blockquote>"Selvtillit starter når du føler deg vel i din egen hud (og i klærne dine)."
+                    <blockquote data-i18n="mission_quote">"Selvtillit starter når du føler deg vel i din egen hud (og i
+                        klærne dine)."
                     </blockquote>
                     <cite>- Emmer Stoltenberg</cite>
                 </div>
@@ -350,47 +398,62 @@
             <div class="container">
                 <div class="footer-layout">
                     <div class="footer-cta">
-                        <h2>Klar for å løfte standarden?</h2>
-                        <p>La oss ta en prat om dine stilmål.</p>
-                        <a href="https://calendar.app.google/aMiKSRivJgHkohbu9" class="btn btn-primary"
-                            target="_blank">Bestill Samtale</a>
+                        <h2 data-i18n="footer_cta_title">Klar for å løfte standarden?</h2>
+                        <p data-i18n="footer_cta_text">La oss ta en prat om dine stilmål.</p>
+                        <a href="https://calendar.app.google/aMiKSRivJgHkohbu9" class="btn btn-primary" target="_blank"
+                            data-i18n="footer_btn">Bestill Samtale</a>
                     </div>
                     <div class="footer-info">
                         <h4>Emmer Stoltenberg</h4>
-                        <p>Personlig Stylist for Menn<br>Oslo, Norge</p>
+                        <p><span data-i18n="footer_role">Personlig Stylist for Menn</span><br><span
+                                data-i18n="footer_location">Oslo, Norge</span></p>
                         <p><a href="mailto:contact@emmerstoltenberg.no">contact@emmerstoltenberg.no</a></p>
                         <p><a href="https://wa.me/4790637771"><i class="ri-whatsapp-line"></i> WhatsApp</a></p>
                     </div>
                 </div>
-                <div class="copyright">
+                <div class="copyright" data-i18n="copyright">
                     © 2025 Emmer Stoltenberg Styling. Alle rettigheter reservert.
                 </div>
             </div>
         </footer>
 
     </main>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
+    <script src="js/translations.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (document.querySelector('.nav-links').classList.contains('active')) {
+                icon.classList.remove('ri-menu-line');
+                icon.classList.add('ri-close-line');
+            } else {
+                icon.classList.remove('ri-close-line');
+                icon.classList.add('ri-menu-line');
+            }
+        });
 
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyDTJyDQApDsGvW8oChzQj4bA5njR9Qxd2Y",
-            authDomain: "emmerstoltenberg-4196751-8e03e.firebaseapp.com",
-            projectId: "emmerstoltenberg-4196751-8e03e",
-            storageBucket: "emmerstoltenberg-4196751-8e03e.firebasestorage.app",
-            messagingSenderId: "1002775948458",
-            appId: "1:1002775948458:web:14279ca359fec7fb2e74d3",
-            measurementId: "G-ZSF3XMD5FL"
-        };
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                // If it's a language toggle, don't close immediately if we want them to see it,
+                // BUT for this specific design (dropdown), clicking a language IS a navigation action in a way.
+                // However, the dropdown is inside nav-links.
+                // If I click the 'lang-btn', it just toggles the dropdown.
+                // If I click a specific language 'a[data-lang]', it runs the setLanguage and...
+                // The original code closes the menu on ANY link click.
+                // I'll leave it as is. If they pick a language on mobile, the menu closes and page updates. That seems fine.
 
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+                // EXCEPT: The 'lang-btn' is a button, not an 'a'. So clicking it won't close the menu. Good.
+                // The dropdown links are 'a' tags. So clicking 'English' will close the mobile menu.
+                // That is actually a good UX (select -> done -> close).
+
+                document.querySelector('.nav-links').classList.remove('active');
+                const icon = document.querySelector('.menu-toggle i');
+                icon.classList.remove('ri-close-line');
+                icon.classList.add('ri-menu-line');
+            });
+        });
     </script>
 </body>
 
